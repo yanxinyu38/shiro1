@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--此处专门存放通用的resultMap，但是命名空间必须要有一个对应的接口-->
+<mapper namespace="com.example.shiro.mapper.CommonMapper">
+    <!--角色权限表的resultMap-->
+    <resultMap id="author" type="com.example.shiro.entity.Authority">
+        <id column="autho_id" property="id"/>
+        <result column="autho_name" property="name"/>
+        <result column="autho_perms" property="perms"/>
+        <result column="autho_level" property="level"/>
+        <result column="autho_father_id" property="fatherId"/>
+    </resultMap>
+
+    <!--角色表的resultMap-->
+    <resultMap id="role" type="com.example.shiro.entity.Role">
+        <id column="role_id" property="id"></id>
+        <id column="role_name" property="roleName"></id>
+    </resultMap>
+</mapper>
